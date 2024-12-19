@@ -1,0 +1,158 @@
+/* إضافة إعدادات viewport */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* إضافة قواعد media queries */
+@media (max-width: 1200px) {
+    /* أنماط للشاشات الكبيرة */
+}
+
+@media (max-width: 992px) {
+    /* أنماط للشاشات المتوسطة */
+}
+
+@media (max-width: 768px) {
+    /* أنماط للشاشات الصغيرة */
+}
+
+@media (max-width: 576px) {
+    /* أنماط للشاشات الصغيرة جدًا */
+}body{
+    background:rgb(0, 0, 0);  
+}
+#container{
+    width:1000px;
+    margin:auto;
+    
+}
+header{
+    height:30px;
+    background:rgb(0, 0, 0);
+    color: azure;
+}
+
+
+main{
+    width : 500px;
+    height:600px;
+    background:rgb(0, 0, 0);
+    float : right ;
+    justify-content:"center";
+    justify-items : "center";
+    display :"center";
+    
+}
+
+aside{
+    width :500px;
+    height : 600px;
+    background:rgb(0, 0, 0);
+    float : left;
+    
+}
+
+
+
+
+.textarea1{
+
+height:400px;
+width : 200px;
+color : white;
+background : black ;
+border: 1px solid blue;
+border-radius: 7px;
+
+
+}
+
+.best{
+    margin : auto;
+    bottom : 50px;
+    padding : 1px;
+    font-size : x-large ;
+    text-align : center;
+}
+
+thead th{
+    background-color: rgb(238, 238, 91);
+    color: rgb(0, 0, 0) !important;
+}
+
+tbody tr:nth-child(even){
+background-color: cadetblue;
+}
+
+th{
+    color:cyan;
+    border:2px solid blue;
+
+}
+
+td{
+    color:white;
+    border:2px solid blue;
+
+}
+
+
+table{
+
+    justify-content:center;
+    justify-items:center;
+    font-size:large;
+    border:2px solid blue;
+    border-collapse: collapse;
+    text-align:center;
+    direction:right;
+
+    background:black;
+   
+
+
+    
+}
+
+.h_class{
+    color :blue;
+    font-size: x-large;
+    justify-content: center;
+    justify-items: center;
+    margin: 10px;
+    position: relative;
+   
+}
+
+.img_sonny{
+    width:60%  ;
+    justify-content: center;
+    justify-items: center;
+
+
+}
+
+.inputa{
+    height:300px;
+    width:400px;
+    background : blue;
+}
+
+.x{
+    color:red;
+    
+    
+
+}
+.best4{
+    color: rgb(255, 255, 255);
+   
+}
+
+.linkyou{
+    color: blue;
+}
