@@ -1,44 +1,3 @@
-// function countWords() {
-
-// let text = document.getElementById("text").value;
-// let wordsCounts = text.split(" ").length;
-
-
-// document.getElementById("best4").innerHTML=wordsCounts;
-
-// }
-
-// // const words = text => {
-
-// return text.split('/\S+/').length ;
-
-// };
-
-
-
-
-// //best code lettre
-// let textWithoutSpace = text.replace(/\s/g, '');
-// let arrayOfLetters = textWithoutSpace.split("");
-
-
-// function countWord() {
-// let counts = {};
-// let text = document.getElementById("text").value;
-// let wordsCount = text.split(" ").length;
-
-// let textWithoutSpace = text.replace(/\s/g, '');
-//  let arrayOfLetters = textWithoutSpace.split("");
-
-
-// document.getElementById("best3").innerHTML=wordsCount;
-
-// }
-
-
-
-
-
 
 
 
@@ -232,7 +191,24 @@ function countWord() {
     
     
     if (faa.includes(ch)){
-       Counter22++
+       Counter22++;
+       document.getElementById("text").addEventListener("input", function() {
+           countWord();
+       });
+       
+       function countWord() {
+           let text = document.getElementById("text").value;
+           let wordsCount = text.split(" ").filter(function(word) {
+               return word.length > 0;
+           }).length;
+       
+           document.getElementById("best3").innerHTML = wordsCount;
+           
+           // حساب عدد الحروف
+           let textWithoutSpace = text.replace(/\s/g, '');
+           let lettersCount = textWithoutSpace.length;
+           document.getElementById("best6").innerHTML = lettersCount;
+       }
     }
     
     
@@ -380,7 +356,7 @@ function countWord() {
     document.getElementById("ddda26").innerHTML=Counter26*27;
     
     
-    
+    tasnimsaid =  Counter1*1 + Counter2*2 + Counter11*3 + Counter4*4 + Counter13*6 + Counter10*5 + Counter6*7 + Counter7*8 + Counter8*9 + Counter12*11 + Counter15*10 + Counter9*12 + Counter22*13 + Counter18*14 + Counter14*15 + Counter5*16 + Counter19*17 + Counter3*18 + Counter27*19 + Counter24*20 + Counter25*21 + Counter16*22 + Counter21*23 + Counter23*24 + Counter28*25 + Counter17*26 + Counter20*28 + Counter26*27  ;
     
     document.getElementById("text").addEventListener("keyup",countWord);
     
@@ -389,7 +365,14 @@ function countWord() {
     
     document.getElementById("best6").innerHTML= Counter1 + Counter2 + Counter3 + Counter4 + Counter5 + Counter6 + Counter7 + Counter8 + Counter9 + Counter10 + Counter11 + Counter12 + Counter13 + Counter14 + Counter15 + Counter16 + Counter17 + Counter18 + Counter19 + Counter20 + Counter21 + Counter22 + Counter23 + Counter24 + Counter25 + Counter26 + Counter27 + Counter28 ;
     
-    
+    function calculateCumulativeSum(n) {
+      return Array.from({ length: n }, (_, i) => i + 1).reduce((acc, curr) => acc + curr, 0);
+  }
+  
+  result = calculateCumulativeSum(`${tasnimsaid}`);
+
+//   console.log(result); // 28
+    document.getElementById("tarakum").innerHTML = result;
     
     }
     
