@@ -356,7 +356,7 @@ function countWord() {
     document.getElementById("ddda26").innerHTML=Counter26*27;
     
     
-    tasnimsaid =  Counter1*1 + Counter2*2 + Counter11*3 + Counter4*4 + Counter13*6 + Counter10*5 + Counter6*7 + Counter7*8 + Counter8*9 + Counter12*11 + Counter15*10 + Counter9*12 + Counter22*13 + Counter18*14 + Counter14*15 + Counter5*16 + Counter19*17 + Counter3*18 + Counter27*19 + Counter24*20 + Counter25*21 + Counter16*22 + Counter21*23 + Counter23*24 + Counter28*25 + Counter17*26 + Counter20*28 + Counter26*27  ;
+   let  tasnimsaid =  Counter1*1 + Counter2*2 + Counter11*3 + Counter4*4 + Counter13*6 + Counter10*5 + Counter6*7 + Counter7*8 + Counter8*9 + Counter12*11 + Counter15*10 + Counter9*12 + Counter22*13 + Counter18*14 + Counter14*15 + Counter5*16 + Counter19*17 + Counter3*18 + Counter27*19 + Counter24*20 + Counter25*21 + Counter16*22 + Counter21*23 + Counter23*24 + Counter28*25 + Counter17*26 + Counter20*28 + Counter26*27  ;
     
     document.getElementById("text").addEventListener("keyup",countWord);
     
@@ -369,11 +369,45 @@ function countWord() {
       return Array.from({ length: n }, (_, i) => i + 1).reduce((acc, curr) => acc + curr, 0);
   }
   
-  result = calculateCumulativeSum(`${tasnimsaid}`);
+ const result = calculateCumulativeSum(`${tasnimsaid}`);
 
 //   console.log(result); // 28
     document.getElementById("tarakum").innerHTML = result;
-    
+
+    // الجذاء العاملي
+//     function factorial(n) {
+//       let result1 = 1;
+//       for (let i = 2; i <= n; i++) {
+//           result1 *= i; // ضرب النتيجة الحالية في i
+//       }
+//       return result1;
+//   }
+
+function factorial(n) {
+   if (n === 0 || n === 1) {
+       return 1; // الجداء العاملي لـ 0 أو 1 هو 1
+   }
+   return n * factorial(n - 1); // استدعاء الدالة لنفسها
+}
+
+//ىهؤث ىالبب
+// function factorial(n) {
+//    let result1 = BigInt(1); // بداية الجداء العاملي كـ BigInt
+//    for (let i = 2; i <= n; i++) {
+//        result1 *= BigInt(i); // ضرب النتيجة الحالية في i
+//    }
+//    return result1.toString(); // تحويل النتيجة إلى سلسلة نصية
+// }
+
+const result1 = factorial(`${tasnimsaid}`); // يمكنك تغيير الرقم هنا
+document.getElementById("amili").innerHTML = result1;// سيطبع الجداء العاملي بشكل كامل
+
+// const result1 = factorial(5);
+console.log(result); // 120
+  
+ 
+//   console.log(result); // 120
+ 
     }
     
     
