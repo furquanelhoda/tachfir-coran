@@ -407,6 +407,22 @@ console.log(result); // 120
   
  
 //   console.log(result); // 120
+// حساب المركب
+function sumOfDigits(num) {
+   // تحويل الرقم إلى سلسلة نصية ثم إلى مصفوفة من الأرقام
+   const digits = num.toString().split('').map(Number);
+   
+   // حساب مجموع الأرقام
+   const sum = digits.reduce((acc, curr) => acc + curr, 0);
+   
+   return sum;
+}
+
+// مثال للاستخدام
+const inputNumber = `${tasnimsaid}`; // يمكنك تغيير الرقم هنا
+const result2 = sumOfDigits(inputNumber);
+console.log(`مجموع أرقام ${inputNumber} هو: ${result}`);
+document.getElementById("morakab").innerHTML = result2;
  
     }
     
